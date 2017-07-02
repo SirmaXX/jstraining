@@ -56,7 +56,7 @@
                }
         
         
-      farklı  fonksiyon örneği
+     // farklı  fonksiyon örneği
    13. function topla(p1,p2){
         
         return p1 * p2;
@@ -65,12 +65,12 @@
     }
           document.getElementById("yazi").innerHTML = topla(3,4);
         
-    NESNE ÖRNEĞİ 1 
+   //  NESNE ÖRNEĞİ 1 
        14 .var car="şahin";
          document.getElementById("yazi").innerHTML = car;
 
    
-         NESNE ÖRNEĞİ 2 
+       //   NESNE ÖRNEĞİ 2 
        15. var objectt ={
             
             height:"11",
@@ -83,27 +83,27 @@
         
         
         
-        STRİNG METHODS YAZI METHODLARI
+       //  STRİNG METHODS YAZI METHODLARI
       
        16. var txt = "examplewordsishere";
 var sln = txt.length;
         alert(sln);
         
         
-        find location words YAZININ KAÇINCI SATIRDA
+      //   find location words YAZININ KAÇINCI SATIRDA
         
         var txt = "example words is here";
         var find= txt.indexOf("example");
         document.getElementById("yazi").innerHTML=find;
              
         
-             Tostring method  sayısal değeri metne çevimek.
+             // Tostring method  sayısal değeri metne çevimek.
          17.var k=12345;
       document.getElementById("yazi").innerHTML= k.toString();
       
       
       
-      MATH METHODS matematik methodları
+      // MATH METHODS matematik methodları
       
       
      18. sayıyı aşapı yuvarlar yuvarlamak
@@ -128,7 +128,7 @@ var sln = txt.length;
     document.getElementById("yazi").innerHTML= araba;
     
     
-    25 .arraysdaki itemleri albafeye göre sıralamak .sorting list item
+   //  25 .arraysdaki itemleri albafeye göre sıralamak .sorting list item
     var araba =["zercedes","ford","lord" ]
     document.getElementById("yazi").innerHTML= araba;
 
@@ -139,13 +139,13 @@ var sln = txt.length;
               
           }
           
-        26.  booleans ifade
+      //   26.  booleans ifade
            10 < 9; false
            10 > 9 ; true
            
     
      
-      27.  switch case şart ifade örneği 
+    //   27.  switch case şart ifade örneği 
       var sayitut =prompt("sayı tut");
        var  i = parseInt(sayitut);
         switch(i){
@@ -165,7 +165,7 @@ var sln = txt.length;
        
                       }
                      
-       28.     koşul ifadeleri if-else örnek         
+     //   28.     koşul ifadeleri if-else örnek         
         var yas =18;
         
         if(yas<18){ 
@@ -186,9 +186,8 @@ var sln = txt.length;
         
         
         
-     30.   while ve for döngüleri 
-        
-        not:while döngüsünde bir koşu sağlandığı sürece döngü devam eder.
+  //    30.   while ve for döngüleri 
+  not:while döngüsünde bir koşu sağlandığı sürece döngü devam eder.
         
         for döngüsünde işi ne kadar yapacağınla ilgilidir 
         
@@ -203,7 +202,7 @@ var sln = txt.length;
         document.getElementById("yazi").innerHTML=liste;
         
         
-        32.while
+       //  32.while
         var sira ="";
         var sirala=prompt("kaç adet dosyayı sıralayalım ?");
         var k = 0;
@@ -218,7 +217,7 @@ var sln = txt.length;
         
         document.getElementById("yazi").innerHTML=sira;
         
-        33.do while 1 işlemi tekrar eder sonra koşulu sorgular    
+       //  33.do while 1 işlemi tekrar eder sonra koşulu sorgular    
         var müsteri =20;
         var siradaki=1;
         var sira=""
@@ -229,7 +228,7 @@ var sln = txt.length;
         }while(siradaki < müsteri);
         document.getElementById("yazi").innerHTML=sira;
      
-       34. TYPEOF
+      //  34. TYPEOF
         
         'words' string
         'null ' object
@@ -237,13 +236,13 @@ var sln = txt.length;
         '25 ' number
         
     
-       35. bitwise bit üzerinde işlem örneği 
+       // 35. bitwise bit üzerinde işlem örneği 
         
         var sBinString = '1011';
 var nMyNumber = parseInt(sBinString, 2);
 alert(nMyNumber); // prints 11, i.e. 1011
  
-      36.Regex  girilen metin değerini(inputu) kontrol etmeye yarar
+      // 36.Regex  girilen metin değerini(inputu) kontrol etmeye yarar
  
         function bas(){
             
@@ -251,7 +250,7 @@ alert(nMyNumber); // prints 11, i.e. 1011
         document.getElementById("kontrol").innerHTML= /d/.test(kelime);
         }
         
- 37.try cache hata ayıklama/yakalama    
+ // 37.try cache hata ayıklama/yakalama    
 function bas() {
     var message, x;
     message = document.getElementById("kontrol");
@@ -270,11 +269,11 @@ function bas() {
 }
 
 
-36. console kullanımı
+// 36. console kullanımı
 console.log("code not found");
 
 
-37."use strict";
+// 37."use strict";
 
 kodunuzun başına eklendiği taktirde hataları consolda gösterir
 
