@@ -1,0 +1,87 @@
+<html>
+<head>
+    
+    
+    </head>
+<body>
+    
+    <script>
+    var soru =prompt("merhaba taş kağıt makas oynayalım mı? ");
+     var sayi =Math.floor(Math.random()*11);
+         var bilgisayar;
+        
+        
+        
+             switch(soru){
+                
+        case 'hayır':    
+        alert("oynayacak başka arkadaşım var :D ");
+        window.close();
+         break;
+                
+       case 'evet':
+       var tahmin =prompt(" taş kağıt makas  seç birini? ");
+         if(sayi <3){      
+        bilgisayar='taş';      
+        }
+        else if(sayi >7){
+         bilgisayar='kağıt';        
+        }
+    else{    
+        bilgisayar= 'makas';
+    }
+    
+    
+    if(soru==bilgisayar){      
+     alert("berabere");
+    }
+                     
+    else if(tahmin =='taş'){
+    if(bilgisayar=='makas'){
+      alert("kazandın");
+        }
+        else
+            {
+            alert("kaybettin");   
+            }   
+                }
+
+     else if(tahmin =="kağıt"){
+     if(bilgisayar =='taş'){       
+         alert ("kazandınız");     
+     }else{
+         alert("kaybettin");
+          }
+    }
+       
+       // makas tahmini yaptığımız vakit oluşan durumlar              
+else if(tahmin =="makas"){
+     if(bilgisayar =='kağıt'){    
+         alert ("kazandınız");           
+     }else{
+         alert("kaybettin");
+          }
+    }
+   break;
+                
+            default:
+                alert("lütfen evet yada hayır giriniz");
+                         break;
+       
+                      }
+
+        
+        
+        
+   
+
+    
+     
+    
+    </script>
+    
+
+    </body>
+
+
+</html>
