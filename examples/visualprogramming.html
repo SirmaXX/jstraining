@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                       <script> 
+
+
+
+
+
+
+function make()
+{
+
+  
+var x =document.getElementById('ilksayi');
+      var y=document.getElementById('sonsayi');
+      var kontrol=document.getElementById('kk');
+
+if(document.getElementById("Check1").checked  == true){
+
+       x.value =Math.floor((Math.random() * 10) );
+        y.value=Math.floor((Math.random() * 10) );
+
+     
+
+}
+else if(document.getElementById("Check2").checked  == true){
+
+        x.value =Math.floor((Math.random() * 100)+10 );
+        y.value =Math.floor((Math.random() * 100)+10 );
+
+}else if(document.getElementById("Check3").checked  == true){
+        x.value =Math.floor((Math.random() * 1000)+10);
+        y.value =Math.floor((Math.random() * 1000)+10);
+
+}else if(document.getElementById("Check4").checked  == true){
+        x.value =Math.floor((Math.random() * 10000)+1000 );
+        y.value =Math.floor((Math.random() * 10000)+1000);
+}}
+
+
+
+function control(){
+
+    var x = parseInt(document.getElementById('ilksayi').value);
+var y= parseInt(document.getElementById('sonsayi').value);
+
+    
+     
+      var kontrol=parseInt(document.getElementById('kk').value);
+
+
+if(document.getElementById("Checko1").checked  == true){
+    var toplam =x+y ;
+if(toplam == kontrol){
+    alert('doğru');
+}else{ alert('yanlış');}
+}
+
+
+else if(document.getElementById("Checko2").checked  == true){
+
+      
+     var cikarma =x-y;
+    
+if(cikarma == kontrol){
+    alert('doğru');
+}else{ alert('yanlış');}
+
+}else if(document.getElementById("Checko3").checked  == true){
+
+    var carpim = x*y;
+    if(carpim == kontrol){
+    alert('doğru');
+}else{ alert('yanlış');}
+
+}else if(document.getElementById("Checko4").checked  == true){
+
+    var bölme =x/y;
+    if(bölme == kontrol){
+    alert('doğru');
+}else{ alert('yanlış');}
+
+}else{
+
+
+
+}
+
+}
+
+    
+                       function selectOnlyThis(id) {
+                                for (var i = 1;i <= 4; i++)
+                                {
+                                    document.getElementById("Check" + i).checked = false;
+                                    
+                                }
+                                document.getElementById(id).checked = true;
+                            }
+
+                            function selectOnlyThisone(id) {
+                                for (var i = 1;i <= 4; i++)
+                                {
+                                    document.getElementById("Checko" + i).checked = false;
+                                }
+                                document.getElementById(id).checked = true;
+                            }
+                        </script>
+        </head>
+<body>
+             
+     <h1>visual programming</h1>
+                <fieldset>
+                 <legend>Basamaklar</legend>
+
+    <ul>
+
+                <input type="checkbox" id="Check1" value="Value1" onclick="selectOnlyThis(this.id)" /> 1 basamaklı
+                <input type="checkbox" id="Check2" value="Value1" onclick="selectOnlyThis(this.id)" /> 2 basamaklı
+                <input type="checkbox" id="Check3" value="Value1" onclick="selectOnlyThis(this.id)" />  3 basamaklı
+                <input type="checkbox" id="Check4" value="Value1" onclick="selectOnlyThis(this.id)" />4 basamaklı
+
+    </ul>
+</fieldset>
+
+<fieldset>
+        <legend>Basamak</legend>
+    <ul>
+
+         
+            
+                <input type="checkbox" id="Checko1" value="Value1" onclick="selectOnlyThisone(this.id)" /> Toplama
+                <input type="checkbox" id="Checko2" value="Value1" onclick="selectOnlyThisone(this.id)" /> Çıkarma
+                <input type="checkbox" id="Checko3" value="Value1" onclick="selectOnlyThisone(this.id)" /> Çarpma
+                <input type="checkbox" id="Checko4" value="Value1" onclick="selectOnlyThisone(this.id)" /> Bölme
+                <input type="checkbox" id="Checko5" value="Value1" onclick="selectOnlyThisone(this.id)" /> Bölme
+            
+            
+                </ul> 
+            </fieldset>
+
+
+            Oluştur
+
+       İlk sayı <input type="text"  id="ilksayi" value=""><br>
+       Son sayı<input type="text"   id="sonsayi" value=""><br>
+       tahmin <input type="text"  id="kk" value=""><br>
+
+
+         <button onclick="make()">Oluştur</button>
+         <button onclick="control()">Kontrol</button>
+
+</body>
+</html>

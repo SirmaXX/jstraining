@@ -1,0 +1,102 @@
+<html>
+<head>
+
+
+
+</head>
+<body >
+    <script>
+    
+    var d1 = new Date();
+var d2 = new Date(d1);
+
+console.log(''+d1+'');
+console.log(''+d2+'');
+    </script>
+    
+        <p id="zaman"></p>
+        <p id="zaman2"></p>
+
+
+        
+        
+        <script>
+
+var time = document.getElementById('zaman');
+
+            function calistir(){
+                var time = new Date();
+                var h = time.getHours();
+    var m = time.getMinutes();
+    var s = time.getSeconds();
+    m = checkTime(m);
+    s = checkTime(s);
+    document.getElementById("zaman").innerHTML =   h + ":" + m + ":" + s;
+
+var time2=new Date(time);
+var hh = time2.getHours();
+    var mm = time2.getMinutes();
+    var ss = time2.getSeconds();
+   
+    document.getElementById("zaman2").innerHTML = " " +
+        convertHourToName(hh)+ " " + 
+        convertNumberToName(mm) + "  " + 
+        convertNumberToName(ss) + " ";
+    
+ var t = setTimeout(calistir, 500);
+                        
+            }             
+
+
+            function checkTime(i) {
+    if (i < 10) {i = "0" + i}; 
+    return i;
+}
+
+
+function convertHourToName(num) {
+    if (num > 12) {
+        num -= 12;
+    }
+    return convertNumberToName(num);
+}
+
+
+
+function convertNumberToName(num) {
+    var lowNames = ["zero", "one", "two", "three", 
+                  "four", "five", "six", "seven", "eight", "nine", 
+                 "ten", "eleven", "twelve", "thirteen", "fourteen", 
+                  "fifteen", "sixteen", "seventeen", 
+                  "eighteen", "nineteen"];
+    var tensNames = ["twenty", "thirty", "forty", "fifty", 
+                "sixty", "seventy", "eighty", "ninety"];
+    var tens, ones, result;
+    if (num < lowNames.length) {
+        result = lowNames[num];
+    } else {
+        tens = Math.floor(num / 10);
+        ones = num % 10;
+        if (tens <= 9) {
+            result = tensNames[tens - 2];
+            if (ones > 0) {
+                result += " " + lowNames[ones];
+            }
+        } else {
+            result = "unknown"
+        }
+    }
+    return result;
+}
+
+
+
+calistir();
+
+
+              
+                </script>
+        <!-- http://jsfiddle.net/jfriend00/EmALf/  *  number conver to words/  -->
+         
+</body>
+</html>
