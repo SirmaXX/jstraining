@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>character counter for beginner</title>
+<head>
+<body>
+
+<textarea id="msg" rows="4" cols="50">
+</textarea>
+<p id="checkchar"></p>
+
+
+<script>
+
+var message =document.getElementById('msg');
+var cchar=document.getElementById('checkchar');
+var max="20";
+ var checkfunc=function(){
+if(message.value.length < max){
+ 
+cchar.innerHTML=(max-message.value.length)+"karakteriniz mevcut";
+}else if(message.value.length >= max){
+cchar.innerHTML="karakteriniz sınırı aşıldı ";
+message.disabled="true";
+}
+}
+
+setInterval(checkfunc,300);
+</script>
+</body>
+</html>
